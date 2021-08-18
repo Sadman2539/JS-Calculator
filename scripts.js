@@ -16,6 +16,10 @@ for (const button of buttons) {
         else if (buttonText === '=') {
             screen.value = eval(screenValue);
         }
+        else if (buttonText === '→') {
+            screenValue = screenValue.substring(0, screenValue.length - 1);
+            screen.value = screenValue;
+        }
         else {
             screenValue += buttonText;
             screen.value = screenValue;
